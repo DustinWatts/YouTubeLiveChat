@@ -69,5 +69,5 @@ Arguments:              Function:
         `);
         break;
     default:
-        console.log('No Valid Argument(s) Passed. Try --help.');
+        console.log('No Valid Argument(s) Passed. Use --help to see valid arguments.');
 }
