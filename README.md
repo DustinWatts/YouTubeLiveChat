@@ -23,7 +23,7 @@ To print out all the chat messages. Where [livechatid] the previously obtained L
 
 Node.js is an open-source cross-platform JavaScript run-time environment. To install NodeJS:
 
-<code>sudo apt install nodejs</code>
+<code>sudo apt install nodejs</code> -or- download from https://nodejs.org/en/
 
 npm is a package manager used to add modules to NodeJS. To install npm:
 
