@@ -5,7 +5,7 @@ To run:
 
 <code>node livechat.js --id [livestreamid]</code>
 
-This will get the LiveChatID from Youtube, where [livestreamid] is the ID that can be found in the YouTube video url: https://www.youtube.com/watch?v=[thisisthelivestreamid]. 
+This will get the LiveChatID from Youtube, where [livestreamid] is the ID that can be found in the YouTube video url: <code>`https://www.youtube.com/watch?v=[thisisthelivestreamid]`</code>. 
 
 Use:
 
