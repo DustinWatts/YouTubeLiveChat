@@ -3,6 +3,8 @@ NodeJS app to get chat messages from a live stream on YouTube. To get the chat m
 
 The next API call that needs to be made is to <code>`https://www.googleapis.com/youtube/v3/liveChat/messages`</code>. This is done with the `--messages` argument. In this case again two parameters are added. <b>&part</b> has two values: <b>id</b> and <b>snippet</b>. The value of <b>&liveChatId</b> is the previously obtained <b>activeLiveChatId</b> The call to this API returns live chat messages for the specified live stream. The messages live in `items[].snippet.displayMessage`.
 
+Both API calls also need <b>&key</b>. A (limited) free Google API key can be obtained by logging in to https://console.cloud.google.com, creating a Project, adding an API to that Project and then creating an API key for that Project. In this app you need to add your API key to <code>sercet.json</code> under <b>"apiKey:"</b>.
+
 # Quick Use Guide
 
 Use:
