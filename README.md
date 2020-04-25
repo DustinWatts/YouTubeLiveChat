@@ -13,16 +13,19 @@ Use:
 
 To print out all the chat messages. Where [livechatid] the previously obtained LiveChatID.
 
-# NodeJS
+# NodeJS + npm
 
 Node.js is an open-source cross-platform JavaScript run-time environment. To install NodeJS:
 
 <code>sudo apt install nodejs</code>
 
-This will install both NodeJs and the npm package manager.
+npm is a package manager used to add modules to NodeJS. To install npm:
+
+<code>sudo apt install npm</code>
+
 
 # secret.json
-This is where your GoogleAPI API-key lives.
+This is where your GoogleAPI API-key lives. 
 
 # node-fetch
 node-fetch is a required module. After cloning, install using <code>npm install node-fetch</code>
