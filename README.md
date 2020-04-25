@@ -1,11 +1,15 @@
 # YouTubeLiveChat
-NodeJS app to get chat messages from a live stream on YouTube. 
+NodeJS app to get chat messages from a live stream on YouTube. To get the chat messages from a live stream on YouTube, two steps are required. The first step is to get the LiveChatId. The second step is to get the messages using that LiveChatId. Unfortunatly these are two different API's. The `--id` argument calls the <code>`https://www.googleapis.com/youtube/v3/videos`</code> API with two parameters: <b>&id</b> calls for a specific video (in this case a live stream) and <b>&part</b> with the part name set to <b>liveStreamingDetails</b> returns some properties of that video. We are interested in the <b>activeLiveChatId</b>.
 
-To run:
+The next API call that needs to be made is to <code>`https://www.googleapis.com/youtube/v3/liveChat/messages`</code>. This is done with the `--messages` argument. In this case again two parameters are added. <b>&part</b> has two values: <b>id</b> and <b>snippet</b>. The value of <b>&liveChatId</b> is the previously obtained <b>activeLiveChatId</b> The call to this API returns live chat messages for the specified live stream. The messages live in `items[].snippet.displayMessage`.
+
+#Quick Use Guide
+
+Use:
 
 <code>node livechat.js --id [livestreamid]</code>
 
-This will get the LiveChatID from Youtube, where [livestreamid] is the ID that can be found in the YouTube video url: <code>`https://www.youtube.com/watch?v=[thisisthelivestreamid]`</code>. 
+To get the LiveChatID from Youtube, where [livestreamid] is the ID that can be found in the YouTube video url: <code>`https://www.youtube.com/watch?v=[thisisthelivestreamid]`</code>. 
 
 Use:
 
@@ -29,3 +33,8 @@ This is where your GoogleAPI API-key lives.
 
 # node-fetch
 node-fetch is a required module. After cloning, install using <code>npm install node-fetch</code>
+
+# Documentation the Google API's
+
+* https://developers.google.com/youtube/v3/docs/videos/list
+* https://developers.google.com/youtube/v3/live/docs/liveChatMessages
