@@ -71,7 +71,7 @@ switch (arguments[2]) {
     console.log(`
 Arguments:              Function:
 
---id [livestreamid]     Prints the LiveChatID for the given LiveStream.
+--id [livestreamid]     Prints the LiveChatID for the given Live Stream.
                         The LiveStreamID is found in the URL of the LiveStream:
                         http://www.youtube.com/watch?v=[thisisthelivestreamid].
 
