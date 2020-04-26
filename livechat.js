@@ -31,7 +31,7 @@ async function getChatId(id) {
 async function getChatMessages(chatid) {
   try {
     var res = await fetch(
-      `https://www.googleapis.com/youtube/v3/liveChat/messages?part=id%2C%20snippet&maxResults=200&key=${secret.apiKey}&liveChatId=${chatid}`
+      `https://www.googleapis.com/youtube/v3/liveChat/messages?part=id%2C%20snippet&key=${secret.apiKey}&liveChatId=${chatid}`
     );
 
     var data = await res.json();
@@ -41,6 +41,7 @@ async function getChatMessages(chatid) {
         for (var i = 0; i < data.items.length; i++) {
           console.log(data.items[i].snippet.displayMessage);
         }
+        console.log(' -- ' + i + ' messages returned --')
       } else {
         error = 'No messages.';
         throw error;
